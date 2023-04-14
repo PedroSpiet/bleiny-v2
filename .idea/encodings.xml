@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/bleiny-commons/commons-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-users/bleiny-container/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-users/bleiny-dataacess/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-users/bleiny-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-users/bleiny-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-users/bleiny-domain/users-domain-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-users/bleiny-domain/users-domain-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-users/bleiny-messaging/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-users/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-users/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-users/users-application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bleiny-users/users-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
