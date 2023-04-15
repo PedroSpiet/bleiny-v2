@@ -1,9 +1,12 @@
 package com.bleiny.domain.core.entity;
 
+import lombok.Getter;
+
 import java.util.UUID;
 
+@Getter
 public class Tellphone {
-    private Integer countryCod;
+    private String countryCod;
 
     public void setId(UUID id) {
         this.id = id;
@@ -25,7 +28,7 @@ public class Tellphone {
 
     private User user;
 
-    public Tellphone(Integer countryCod, UUID id, String ddd, String number, User user) {
+    public Tellphone(String countryCod, UUID id, String ddd, String number, User user) {
         this.countryCod = countryCod;
         this.id = id;
         this.ddd = ddd;
@@ -33,27 +36,4 @@ public class Tellphone {
         this.user = user;
     }
 
-    public Integer getCountryCod() {
-        return countryCod;
-    }
-
-    public void setCountryCod(Integer countryCod) {
-        this.countryCod = countryCod;
-    }
-
-    public String getDdd() {
-        return ddd;
-    }
-
-    public void setDdd(String ddd) {
-        this.ddd = ddd;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
 }

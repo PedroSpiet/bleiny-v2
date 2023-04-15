@@ -15,17 +15,21 @@ import java.util.UUID;
 @Getter
 @Setter
 public class TellphoneEntity {
-    private Integer countryCod;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "tellphone_uuid")
     private  String tellphoneUuid;
 
-    private Integer ddd;
+    private String ddd;
 
-    private Integer number;
+    @Column(name = "country_code")
+    private String countryCod;
+
+    @Column(name = "tellphone_number")
+    private String number;
 
     @OneToOne
     @JoinColumn(name = "user_id")

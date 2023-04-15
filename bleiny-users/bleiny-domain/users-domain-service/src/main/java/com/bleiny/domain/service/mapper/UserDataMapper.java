@@ -18,6 +18,10 @@ public class UserDataMapper {
                 .gender(createUserCommand.getGender())
                 .isActive(Boolean.TRUE)
                 .firstName(createUserCommand.getFirstName())
+                .image(createUserCommand.getImage())
+                .password(createUserCommand.getPassword())
+                .email(createUserCommand.getEmail())
+                .username(createUserCommand.getUsername())
                 .build();
     }
 }

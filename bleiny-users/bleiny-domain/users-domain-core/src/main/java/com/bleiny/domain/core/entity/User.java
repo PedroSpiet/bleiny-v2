@@ -22,10 +22,11 @@ public class User extends AggregateRoot<UserId> {
     private String lastName;
     private Tellphone tellphone;
     private Address address;
-    private Integer age;
-
+    private String password;
+    private String username;
+    private String email;
     private Gender gender;
-
+    private String image;
     private LocalDate birthdayDate;
 
     private String bio;
@@ -61,9 +62,6 @@ public class User extends AggregateRoot<UserId> {
         return address;
     }
 
-    public Integer getAge() {
-        return age;
-    }
 
     public Gender getGender() {
         return gender;

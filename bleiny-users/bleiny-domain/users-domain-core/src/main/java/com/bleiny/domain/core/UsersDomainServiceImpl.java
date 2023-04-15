@@ -1,5 +1,6 @@
 package com.bleiny.domain.core;
 
+import com.bleiny.domain.core.entity.Tellphone;
 import com.bleiny.domain.core.entity.User;
 import com.bleiny.domain.core.event.UserCreatedEvent;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +21,24 @@ public class UsersDomainServiceImpl implements UsersDomainService {
     }
 
     public void validateInfoUsers(User user) {
-        // TODO
+        validateTellphone(user.getTellphone());
+        validateEmail(user.getEmail());
+    }
+
+    private void validateEmail(String email) {
+        if (email == null ||
+                !email.matches("^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$")) {
+            throw new IllegalArgumentException("Invalid Email");
+        }
+    }
+
+    private void validateTellphone(Tellphone tellphone) {
+        String number = tellphone.getDdd() + tellphone.getNumber();
+        if (number == null) {
+            throw new IllegalArgumentException("Number is necessary!");
+        }
+        if (!number.matches("^\\(?[1-9]{2}\\)? ?(?:[2-8]|9[1-9])[0-9]{3}\\-?[0-9]{4}$")) {
+            throw new IllegalArgumentException("Invalid number");
+        }
     }
 }

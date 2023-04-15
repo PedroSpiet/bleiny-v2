@@ -23,8 +23,14 @@ public class UserEntity {
     private Long id;
 
     private  String userUuid;
+    @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
+
+    private String image;
+
     @OneToOne(mappedBy = "user", cascade=CascadeType.PERSIST)
     private TellphoneEntity tellphone;
 
@@ -34,6 +40,12 @@ public class UserEntity {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
+    private String password;
+
+    private String email;
+
+    private String username;
+
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate birthdayDate;
     private String bio;
@@ -41,5 +53,6 @@ public class UserEntity {
     @OneToMany(mappedBy = "user", cascade=CascadeType.PERSIST)
     private List<GeolocalizationUserEntity> geolocalizationUser;
 
+    @Column(name = "is_active")
     private Boolean isActive;
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -35,6 +36,18 @@ public class CreateUserCommand {
     private Address address;
     @NotNull
     private Gender gender;
+    @NotNull
+    private String password;
+
+    @NotNull
+    private String username;
+
+    @NotNull
+    @Email
+    private String email;
+
+    private String image;
+
     @NotNull
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthdayDate;

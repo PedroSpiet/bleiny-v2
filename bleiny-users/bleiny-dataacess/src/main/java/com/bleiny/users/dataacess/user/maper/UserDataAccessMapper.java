@@ -44,6 +44,10 @@ public class UserDataAccessMapper {
         userEntity.setAddress(
                 userAddressToAddressEntity(user.getAddress(), userEntity)
         );
+        userEntity.setPassword(user.getPassword());
+        userEntity.setEmail(user.getEmail());
+        userEntity.setUsername(user.getUsername());
+        userEntity.setImage(user.getImage());
         return userEntity;
     }
 
@@ -68,9 +72,9 @@ public class UserDataAccessMapper {
     private TellphoneEntity tellphoneToEntity(Tellphone tellphone, UserEntity user) {
         TellphoneEntity tellphoneEntity = new TellphoneEntity();
         tellphoneEntity.setUser(user);
-        tellphone.setCountryCod(tellphone.getCountryCod());
-        tellphoneEntity.setNumber(tellphoneEntity.getNumber());
-        tellphoneEntity.setDdd(tellphoneEntity.getDdd());
+        tellphoneEntity.setCountryCod(tellphone.getCountryCod());
+        tellphoneEntity.setNumber(tellphone.getNumber());
+        tellphoneEntity.setDdd(tellphone.getDdd());
         tellphoneEntity.setTellphoneUuid(tellphone.getId().toString());
         return tellphoneEntity;
     }
