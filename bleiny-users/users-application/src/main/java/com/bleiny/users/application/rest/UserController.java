@@ -2,6 +2,7 @@ package com.bleiny.users.application.rest;
 
 import com.bleiny.domain.service.dto.create.CreateUserCommand;
 import com.bleiny.domain.service.ports.input.service.UserApplicationService;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,8 +21,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createUser(@RequestBody CreateUserCommand createUserCommand) {
-        log.info("im here");
+    public ResponseEntity<?> createUser(@Valid @RequestBody CreateUserCommand createUserCommand) {
         userApplicationService.createUser(createUserCommand);
         return ResponseEntity.noContent().build();
     }

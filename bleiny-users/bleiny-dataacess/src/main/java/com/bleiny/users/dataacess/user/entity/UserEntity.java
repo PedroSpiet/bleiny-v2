@@ -1,17 +1,16 @@
 package com.bleiny.users.dataacess.user.entity;
 
 import com.bleiny.domain.core.valueobjects.Gender;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -20,7 +19,10 @@ import java.util.UUID;
 public class UserEntity {
 
     @Id
-    private  UUID userId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private  String userUuid;
     private String firstName;
     private String lastName;
     @OneToOne(mappedBy = "user", cascade=CascadeType.PERSIST)
@@ -28,8 +30,11 @@ public class UserEntity {
 
     @OneToOne(mappedBy = "user", cascade=CascadeType.PERSIST)
     private AddressEntity address;
-    private Integer age;
+
+    @Enumerated(EnumType.STRING)
     private Gender gender;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate birthdayDate;
     private String bio;
 

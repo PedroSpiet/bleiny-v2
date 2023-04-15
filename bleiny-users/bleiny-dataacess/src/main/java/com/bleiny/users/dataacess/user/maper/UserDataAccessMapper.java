@@ -14,6 +14,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Component
@@ -29,12 +30,11 @@ public class UserDataAccessMapper {
     public UserEntity userToEntity(User user) {
          UserEntity userEntity = new UserEntity();
 
-         userEntity.setUserId(user.getId().getValue());
+         userEntity.setUserUuid(user.getId().getValue().toString());
          userEntity.setGeolocalizationUser(
                  geolocalizationUserToEntity(user.getGeolocalizationUser())
                  );
          userEntity.setBio(user.getBio());
-         userEntity.setAge(user.getAge());
         userEntity.setGender(user.getGender());
         userEntity.setIsActive(user.getActive());
         userEntity.setFirstName(user.getFirstName());
@@ -53,7 +53,7 @@ public class UserDataAccessMapper {
         addressEntity.setCity(address.getCity());
         addressEntity.setCountry(address.getCountry());
         addressEntity.setState(address.getState());
-        addressEntity.setId(address.getId());
+        addressEntity.setAddressUuid(address.getId().toString());
         return addressEntity;
     }
 
@@ -71,17 +71,11 @@ public class UserDataAccessMapper {
         tellphone.setCountryCod(tellphone.getCountryCod());
         tellphoneEntity.setNumber(tellphoneEntity.getNumber());
         tellphoneEntity.setDdd(tellphoneEntity.getDdd());
-        tellphoneEntity.setId(tellphone.getId());
+        tellphoneEntity.setTellphoneUuid(tellphone.getId().toString());
         return tellphoneEntity;
     }
 
     public User userEntityToUser(UserEntity userSaved) {
-        User user = new User();
-        user.setId(new UserId(userSaved.getUserId()));
-        user.setGeolocalizationUser(null);
-        log.info(String.valueOf(userSaved.getAddress()));
-        user.setBio(userSaved.getBio());
-
-        return user;
+       return mapper.map(userSaved, User.class);
     }
 }

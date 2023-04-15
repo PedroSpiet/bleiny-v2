@@ -14,7 +14,6 @@ public class UserDataMapper {
                 .birthdayDate(createUserCommand.getBirthdayDate())
                 .lastName(createUserCommand.getLastName())
                 .tellphone(createUserCommand.getTellphone())
-                .age(createUserCommand.getAge())
                 .address(createUserCommand.getAddress())
                 .gender(createUserCommand.getGender())
                 .isActive(Boolean.TRUE)

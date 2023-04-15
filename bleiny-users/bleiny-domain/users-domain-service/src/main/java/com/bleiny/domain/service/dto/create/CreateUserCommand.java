@@ -4,6 +4,11 @@ import com.bleiny.commons.domain.valueobjects.GeolocalizationUser;
 import com.bleiny.domain.core.entity.Address;
 import com.bleiny.domain.core.entity.Tellphone;
 import com.bleiny.domain.core.valueobjects.Gender;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,8 +22,9 @@ import java.util.UUID;
 @AllArgsConstructor
 @Data
 public class CreateUserCommand {
-    @NotNull
+
     private final UUID userId;
+
     @NotNull
     private String firstName;
     @NotNull
@@ -28,10 +34,9 @@ public class CreateUserCommand {
     @NotNull
     private Address address;
     @NotNull
-    private Integer age;
-    @NotNull
     private Gender gender;
     @NotNull
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthdayDate;
     private String bio;
     private List<GeolocalizationUser> geolocalizationUser;

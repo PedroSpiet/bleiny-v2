@@ -24,7 +24,10 @@ public class GeolocalizationUserEntity {
     private Boolean isGlobal;
 
     @Id
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String geolocUuid;
 
 
     @ManyToOne

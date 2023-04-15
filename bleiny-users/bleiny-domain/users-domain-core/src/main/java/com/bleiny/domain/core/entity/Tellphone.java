@@ -15,9 +15,9 @@ public class Tellphone {
 
     private UUID id;
 
-    private Integer ddd;
+    private String ddd;
 
-    private Integer number;
+    private String number;
 
     public User getUser() {
         return user;
@@ -25,7 +25,7 @@ public class Tellphone {
 
     private User user;
 
-    public Tellphone(Integer countryCod, UUID id, Integer ddd, Integer number, User user) {
+    public Tellphone(Integer countryCod, UUID id, String ddd, String number, User user) {
         this.countryCod = countryCod;
         this.id = id;
         this.ddd = ddd;
@@ -41,19 +41,19 @@ public class Tellphone {
         this.countryCod = countryCod;
     }
 
-    public Integer getDdd() {
+    public String getDdd() {
         return ddd;
     }
 
-    public void setDdd(Integer ddd) {
+    public void setDdd(String ddd) {
         this.ddd = ddd;
     }
 
-    public Integer getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(Integer number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 }

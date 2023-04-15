@@ -1,25 +1,27 @@
 package com.bleiny.users.dataacess.user.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
-@Table(name = "address_table")
+@Table(name = "tellphone_table")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Data
+@Getter
+@Setter
 public class TellphoneEntity {
     private Integer countryCod;
 
     @Id
-    private  UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private  String tellphoneUuid;
 
     private Integer ddd;
 
