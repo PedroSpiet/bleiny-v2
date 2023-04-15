@@ -44,7 +44,7 @@ public class UserCreateHelper {
     private User saveUser(User user) {
         User userResult = userRepository.save(user);
         if (userResult == null) {
-            // TODO EXCEPTION
+            // TODO EXCEPTIONs
         }
         log.info("Saved with sucessfuly");
         return user;
