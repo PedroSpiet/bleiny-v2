@@ -9,3 +9,6 @@ spring:
 
 application:
   name: spaces-users-service
+
+server:
+  port: 8000

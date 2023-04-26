@@ -1,4 +1,3 @@
-CREATE DATABASE IF NOT EXISTS spaces;
 
 CREATE TABLE IF NOT EXISTS users_table(
     id bigint(20) auto_increment primary key,

@@ -4,10 +4,7 @@ import com.bleiny.commons.domain.enity.AggregateRoot;
 import com.bleiny.commons.domain.valueobjects.GeolocalizationUser;
 import com.bleiny.commons.domain.valueobjects.UserId;
 import com.bleiny.domain.core.valueobjects.Gender;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -16,7 +13,8 @@ import java.util.UUID;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 public class User extends AggregateRoot<UserId> {
     private String firstName;
     private String lastName;

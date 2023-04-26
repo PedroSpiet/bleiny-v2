@@ -18,6 +18,5 @@ public class ApplicationDomainEventPublisher implements ApplicationEventPublishe
 
     public void publish(UserCreatedEvent userCreatedEvent) {
         this.applicationEventPublisher.publishEvent(userCreatedEvent);
-        log.info("UserCreatedEvent is published for user id: {}", userCreatedEvent.getUser().getId().getValue().toString());
     }
 }

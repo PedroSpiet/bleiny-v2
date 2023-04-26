@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
-@Slf4j
 @Component
+@Slf4j
 public class UsersDomainServiceImpl implements UsersDomainService {
     @Override
     public UserCreatedEvent validateAndInitiateUser(User user) {

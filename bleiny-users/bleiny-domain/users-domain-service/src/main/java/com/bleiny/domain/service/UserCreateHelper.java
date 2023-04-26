@@ -35,17 +35,14 @@ public class UserCreateHelper {
                 converted
         );
 
-        log.info("Saving user {}",  userCreatedEvent.getUser().getId().getValue().toString());
+        log.info("Saving user {}", userCreatedEvent.getUser().getId().getValue().toString());
         saveUser(converted);
         applicationEventPublisher.publishEvent(userCreatedEvent);
         return userCreatedEvent;
     }
 
-    private User saveUser(User user) {
+    public User saveUser(User user) {
         User userResult = userRepository.save(user);
-        if (userResult == null) {
-            // TODO EXCEPTIONs
-        }
         log.info("Saved with sucessfuly");
         return user;
     }

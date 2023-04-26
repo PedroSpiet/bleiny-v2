@@ -1,10 +1,12 @@
 package com.bleiny.domain.core.entity;
 
+import lombok.Builder;
 import lombok.Getter;
 
 import java.util.UUID;
 
 @Getter
+@Builder
 public class Tellphone {
     private String countryCod;
 

@@ -1,6 +1,7 @@
 package com.bleiny.domain.core.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -8,6 +9,8 @@ import java.util.Objects;
 import java.util.UUID;
 
 @NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class Address {
     public UUID getId() {
         return id;
