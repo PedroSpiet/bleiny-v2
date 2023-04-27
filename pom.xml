@@ -15,6 +15,7 @@
     <modules>
         <module>bleiny-users</module>
         <module>bleiny-commons</module>
+        <module>infraestructure</module>
     </modules>
 
     <groupId>com.bleiny</groupId>
