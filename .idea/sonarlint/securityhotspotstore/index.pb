@@ -44,8 +44,6 @@ Z
 .infraestructure/s3/environments/dev/dev.tfvars,8\b\8bfe95b3c797b7ae23de768986d2772cac80ab9a
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-9
-	Readme.md,0\c\0c1945d7443c2e154bd3e421c0d438bd4086d8c3
 D
 bleiny-users/pom.xml,7\9\7943a541c1fc83587c3a3d59fc7b72cea49aca74
 ¸
