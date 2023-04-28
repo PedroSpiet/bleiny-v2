@@ -80,6 +80,33 @@ public class UserDataAccessMapper {
     }
 
     public User userEntityToUser(UserEntity userSaved) {
-       return mapper.map(userSaved, User.class);
+        var user =  User
+                .builder()
+                .geolocalizationUser(null)
+                .tellphone(Tellphone.builder()
+                        .number(userSaved.getTellphone().getNumber())
+                        .countryCod(userSaved.getTellphone().getCountryCod())
+                        .ddd(userSaved.getTellphone().getDdd())
+                        .build())
+                .bio(userSaved.getBio())
+                .birthdayDate(userSaved.getBirthdayDate())
+                .image(userSaved.getImage())
+                .address(Address.builder()
+                        .id(UUID.fromString(userSaved.getAddress().getAddressUuid()))
+                        .city(userSaved.getAddress().getCity())
+                        .state(userSaved.getAddress().getState())
+                        .country(userSaved.getAddress().getCountry())
+                        .build())
+                .email(userSaved.getEmail())
+                .firstName(userSaved.getFirstName())
+                .gender(userSaved.getGender())
+                .isActive(userSaved.getIsActive())
+                .lastName(userSaved.getLastName())
+                .isActive(userSaved.getIsActive())
+                .password(userSaved.getPassword())
+                .username(userSaved.getUsername())
+                .build();
+
+        return user;
     }
 }
