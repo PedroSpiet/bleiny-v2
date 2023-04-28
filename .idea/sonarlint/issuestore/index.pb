@@ -34,3 +34,35 @@ kbleiny-users/bleiny-dataacess/src/main/java/com/bleiny/users/dataacess/user/map
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 U
 %bleiny-users/bleiny-dataacess/pom.xml,e\a\eaccacbce37e335020f9a22f46b341ef963bb281
+é
+^bleiny-commons/commons-domain/src/main/java/com/bleiny/commons/domain/valueobjects/BaseId.java,c\e\ceca84e1b54342d2b3e0ab40b1f434c1360b2377
+é
+^bleiny-commons/commons-domain/src/main/java/com/bleiny/commons/domain/valueobjects/UserId.java,3\a\3ad2bef6ca1c3c577a74dbcd4bcdb92007678668
+a
+1infraestructure/docker-compose/docker-compose.yml,2\e\2edb0c74a2454df8ad8e483915b1896f9d16ae6e
+N
+infraestructure/s3/provider.tf,c\e\cef6e34fdb2c4503b0aeba56ab108a1e230e7392
+J
+infraestructure/s3/main.tf,2\1\21bdc6ae4f5f554b54b30a40e977073dc4fbba19
+L
+infraestructure/s3/output.tf,5\6\56b1b586809d924c706e872f757baa8e91caee3d
+J
+infraestructure/s3/tags.tf,5\9\592477687e21946506712b17ff68cca578f078d2
+W
+'infraestructure/s3/modules/s3/output.tf,7\6\765722dee5c37474cf49e2a36f4a52cdea8bce92
+^
+.infraestructure/s3/environments/dev/dev.tfvars,8\b\8bfe95b3c797b7ae23de768986d2772cac80ab9a
+Y
+)infraestructure/s3/modules/s3/resource.tf,5\1\51e032943959bec69f24cb0c7234f1b679b0050a
+Z
+*infraestructure/s3/modules/s3/variables.tf,2\2\22deef6ab0712ab27ddcf96a7ede832e096d581c
+O
+infraestructure/s3/variables.tf,e\7\e7296d81ed4a568b4bf2e7d824df96eddd450b9c
+•
+ubleiny-users/bleiny-domain/users-domain-service/src/main/java/com/bleiny/domain/service/UserCreateCommandHandler.java,3\a\3a4ad95539e729c9636c214a85b366110eb11cf8
+ß
+wbleiny-users/bleiny-domain/users-domain-service/src/main/java/com/bleiny/domain/service/UserApplicationServiceImpl.java,1\7\179514aede41db4ff77ccb4ff0d24d06fa176f41
+ù
+mbleiny-users/bleiny-domain/users-domain-service/src/main/java/com/bleiny/domain/service/UserCreateHelper.java,9\b\9b0a8708cc6d07abcca5316ea2f2bf8a8df99307
+9
+	Readme.md,0\c\0c1945d7443c2e154bd3e421c0d438bd4086d8c3
