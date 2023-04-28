@@ -22,6 +22,7 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "user_uuid")
     private  String userUuid;
     @Column(name = "first_name")
     private String firstName;

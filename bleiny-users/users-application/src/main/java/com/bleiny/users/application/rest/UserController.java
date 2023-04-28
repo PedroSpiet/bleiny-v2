@@ -4,11 +4,10 @@ import com.bleiny.domain.service.dto.create.CreateUserCommand;
 import com.bleiny.domain.service.ports.input.service.UserApplicationService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @Slf4j
 @RestController
@@ -24,5 +23,12 @@ public class UserController {
     public ResponseEntity<?> createUser(@Valid @RequestBody CreateUserCommand createUserCommand) {
         userApplicationService.createUser(createUserCommand);
         return ResponseEntity.noContent().build();
+    }
+
+    @PatchMapping(value = "/{uuid}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<?> patchImageProfile(@PathVariable String uuid,
+                                               @RequestParam("file") MultipartFile file) {
+        return userApplicationService.updateProfileImage(uuid, file);
+
     }
 }
