@@ -2,7 +2,6 @@ package com.bleiny.community.domain.core.entity;
 
 import com.bleiny.commons.domain.enity.AggregateRoot;
 import com.bleiny.commons.domain.valueobjects.CommunityId;
-import com.bleiny.commons.domain.valueobjects.UserId;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -17,9 +16,10 @@ public class Community extends AggregateRoot<CommunityId> {
     private final String communityName;
     private final String description;
     private final List<Tag> tags;
-
+    private final Long idCommunity;
     private final User userCreator;
 
+    private final String  communityImage;
     private final List<Roles> roles;
 
     private Integer membersQuantity;
@@ -30,11 +30,13 @@ public class Community extends AggregateRoot<CommunityId> {
 
     private final List<Room> rooms;
 
-    public Community(String communityName, String description, List<Tag> tags, User userCreator, List<Roles> roles, Integer membersQuantity, List<Room> rooms) {
+    public Community(String communityName, String description, List<Tag> tags, Long idCommunity, User userCreator, String communityImage, List<Roles> roles, Integer membersQuantity, List<Room> rooms) {
         this.communityName = communityName;
         this.description = description;
         this.tags = tags;
+        this.idCommunity = idCommunity;
         this.userCreator = userCreator;
+        this.communityImage = communityImage;
         this.roles = roles;
         this.membersQuantity = membersQuantity;
         this.rooms = rooms;

@@ -7,6 +7,8 @@ import com.bleiny.community.domain.core.entity.Community;
 import com.bleiny.community.domain.service.ports.output.repository.CommunityRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 @Component
 public class CommunityRepositoryImpl implements CommunityRepository {
     private final CommunityDataMapper communityDataMapper;
@@ -37,5 +39,25 @@ public class CommunityRepositoryImpl implements CommunityRepository {
 
 
         return communityDataMapper.entityToCommunity(community);
+    }
+
+    @Override
+    public Community findByUuid(String communityUuid) {
+        CommunityEntity community = repository.findByCommunityUuid(communityUuid)
+                .orElseThrow(() -> new IllegalStateException(("Community Not found!")));
+
+
+        return communityDataMapper.entityToCommunity(community);
+    }
+
+    @Override
+    public void findAndUpdateImage(String uuid, String filename) {
+        CommunityEntity community = repository.findByCommunityUuid(uuid)
+                .orElseThrow(() -> new IllegalStateException("Community not found"));
+
+        community.setCommunityImage(filename);
+
+        repository.save(community);
+
     }
 }

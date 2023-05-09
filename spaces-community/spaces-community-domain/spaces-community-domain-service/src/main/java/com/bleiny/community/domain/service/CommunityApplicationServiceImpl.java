@@ -7,6 +7,7 @@ import com.bleiny.community.domain.service.dto.TagServerVinculateCommand;
 import com.bleiny.community.domain.service.ports.input.service.CommunityService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 @Service
 @Slf4j
@@ -19,11 +20,14 @@ public class CommunityApplicationServiceImpl implements CommunityService {
 
     private final CreateRoomComandHandler createRoomComandHandler;
 
-    public CommunityApplicationServiceImpl(CommunityCreateCommandHandler communityCreateCommandHandler, TagCommunityCommandHandler communityCommandHandler, EnjoyCommunityCommandHandler enjoyCommunityCommandHandler, CreateRoomComandHandler createRoomComandHandler) {
+    private final PatchImageCommunityCommandHandler patchImageCommunityCommandHandlera;
+
+    public CommunityApplicationServiceImpl(CommunityCreateCommandHandler communityCreateCommandHandler, TagCommunityCommandHandler communityCommandHandler, EnjoyCommunityCommandHandler enjoyCommunityCommandHandler, CreateRoomComandHandler createRoomComandHandler, PatchImageCommunityCommandHandler patchImageCommunityCommandHandlera) {
         this.communityCreateCommandHandler = communityCreateCommandHandler;
         this.tagCommunityCommandHandler = communityCommandHandler;
         this.enjoyCommunityCommandHandler = enjoyCommunityCommandHandler;
         this.createRoomComandHandler = createRoomComandHandler;
+        this.patchImageCommunityCommandHandlera = patchImageCommunityCommandHandlera;
     }
 
     @Override
@@ -44,5 +48,10 @@ public class CommunityApplicationServiceImpl implements CommunityService {
     @Override
     public void createRoom(CreateRoomCommand command) {
         createRoomComandHandler.handle(command);
+    }
+
+    @Override
+    public void patchImage(String uuid, MultipartFile file) {
+        patchImageCommunityCommandHandlera.handle(uuid, file);
     }
 }

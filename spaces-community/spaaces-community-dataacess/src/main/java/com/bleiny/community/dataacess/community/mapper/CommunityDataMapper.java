@@ -29,6 +29,8 @@ public class CommunityDataMapper {
                 .communityName(community.getCommunityName())
                 .communityUuid(community.getId().getValue().toString())
                 .description(community.getDescription())
+                .membersQuantity(community.getMembersQuantity())
+                .id(community.getIdCommunity())
                 .userCreator(UserMapper.userToEntity(community.getUserCreator())).build();
 
 
@@ -42,6 +44,7 @@ public class CommunityDataMapper {
                 .membersQuantity(community.getMembersQuantity())
                 .communityName(community.getCommunityName())
                  .userCreator(UserMapper.EntitytoUser(community.getUserCreator()))
+                 .idCommunity(community.getId())
                 .build();
 
          com.setId(new CommunityId(UUID.fromString(community.getCommunityUuid())));

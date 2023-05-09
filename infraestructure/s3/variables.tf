@@ -9,6 +9,11 @@ variable "bucket_name" {
   type = string
 }
 
+variable "bucket_name_community" {
+  description = "Community Bucket to upload logo image from profile"
+  type = string
+}
+
 variable "team" {
   description = "The name of the team"
   default = "DevOps"
@@ -23,7 +28,7 @@ variable "project" {
 
 variable "created_by" {
   description = "Resources created by"
-  default = "Syed Umair Ali"
+  default = "PedroSpiet"
   type = string
 }
 

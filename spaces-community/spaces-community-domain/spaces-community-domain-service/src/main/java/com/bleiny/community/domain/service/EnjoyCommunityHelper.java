@@ -30,7 +30,6 @@ public class EnjoyCommunityHelper {
             }
 
             Community community = communityRepository.findById(command.getCommunityId());
-
             community.setMembersQuantity(community.getMembersQuantity() + 1);
 
             enjoyCommunityRepository.save(command.getUserId(), command.getCommunityId());
