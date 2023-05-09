@@ -1,7 +1,0 @@
-
-y
-java:S1488S"\Immediately return this expression instead of assigning it to the temporary variable "user".(ÕÉä8ÀûŒÎü0
-t
-java:S6204E"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ø´Œ–ùÿÿÿÿ8ÑûŒÎü0
-g
-java:S1128"JRemove this unused import 'com.bleiny.commons.domain.valueobjects.UserId'.(êØ¶È8²ÅĞü0

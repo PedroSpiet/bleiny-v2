@@ -1,6 +1,6 @@
 package com.bleiny.domain.core.event;
 
-import com.bleiny.commons.domain.events.UserDomainEvent.DomainEvent;
+import com.bleiny.commons.domain.events.DomainEvent.DomainEvent;
 import com.bleiny.domain.core.entity.User;
 
 import java.time.ZonedDateTime;

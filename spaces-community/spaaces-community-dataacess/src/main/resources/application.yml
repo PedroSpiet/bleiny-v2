@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    open-in-view: false
+    show-sql: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/spaces?useTimezone=true&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: docker
+
+application:
+  name: spaces-community-service
+
+server:
+  port: 8001
