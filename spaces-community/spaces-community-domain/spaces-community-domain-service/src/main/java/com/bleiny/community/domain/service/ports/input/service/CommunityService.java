@@ -4,6 +4,7 @@ import com.bleiny.community.domain.service.dto.CreateCommunityCommand;
 import com.bleiny.community.domain.service.dto.CreateRoomCommand;
 import com.bleiny.community.domain.service.dto.EnjoyCommunityCommand;
 import com.bleiny.community.domain.service.dto.TagServerVinculateCommand;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface CommunityService {
     public void createCommunity(CreateCommunityCommand command);
@@ -13,4 +14,6 @@ public interface CommunityService {
     void enjoy(EnjoyCommunityCommand command) throws Exception;
 
     void createRoom(CreateRoomCommand command);
+
+    void patchImage(String uuid, MultipartFile file);
 }

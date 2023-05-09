@@ -13,3 +13,14 @@ resource "aws_s3_bucket" "bucket" {
     }
   )
 }
+
+resource "aws_s3_bucket" "bucket_community" {
+  bucket = "${var.bucket_name_community}-teste"
+
+  tags = merge(
+    var.common_tags,
+    {
+      Name = "${var.bucket_name_community}"
+    }
+  )
+}

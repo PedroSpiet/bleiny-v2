@@ -23,5 +23,5 @@ public class CreateCommunityCommand {
     private final List<Tag> tags;
 
     private final User userCreator;
-    private  Integer membersQuantity = 1;
+    private  Integer membersQuantity;
 }
