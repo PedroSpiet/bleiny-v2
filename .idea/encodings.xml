@@ -17,6 +17,19 @@
     <file url="file://$PROJECT_DIR$/bleiny-users/users-domain/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/infraestructure/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/infraestructure/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-chat-community/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-chat-personal/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-community/spaaces-community-dataacess/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-community/spaces-community-application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-community/spaces-community-container/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-community/spaces-community-domain/spaces-community-domain-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-community/spaces-community-domain/spaces-communnity-domain-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-community/spaces-community-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-community/spaces-community-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-community/spaces-community-messaging/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-community/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-community/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spaces-telescope/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

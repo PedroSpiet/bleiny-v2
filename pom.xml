@@ -39,6 +39,18 @@
                 <artifactId>commons-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.bleiny.community.domain.service</groupId>
+                <artifactId>spaces-community-domain-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bleiny.community.domain.core</groupId>
+                <artifactId>spaces-communnity-domain-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

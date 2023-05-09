@@ -1,0 +1,20 @@
+
+g	java:S112L"FDefine and throw a dedicated exception instead of using a generic one.(»Õ™¼úÿÿÿÿ8öêÉÑü0
+g	java:S112H"FDefine and throw a dedicated exception instead of using a generic one.( Éâ–ûÿÿÿÿ8Ï¨ Òü0
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(÷ÅÈôùÿÿÿÿ8ëÉÑü0
+W
+java:S18541";Remove this useless assignment to local variable "oldPath".(®¥˜D8‘ëÉÑü0
+N
+java:S1481,",Remove this unused "oldPath" local variable.(ˆÛ²·ıÿÿÿÿ8“ëÉÑü0
+X	java:S125@"<This block of commented-out lines of code should be removed.(Ëş…8–ëÉÑü0
+O
+java:S1135@"2Complete the task associated to this TODO comment.(Ëş…8—ëÉÑü0
+g
+java:S1128"JRemove this unused import 'com.bleiny.commons.domain.valueobjects.UserId'.(êØ¶È8é¨ Òü0
+R
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8ê¨ Òü0
+R
+java:S1068"6Remove this unused "usersDomainService" private field.(¡øóy8¡ëÉÑü0
+O
+java:S1068"2Remove this unused "userDataMapper" private field.(ºÃË8¡ëÉÑü0

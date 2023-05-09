@@ -12,6 +12,20 @@
     <groupId>com.bleiny.community.domain.service</groupId>
     <artifactId>spaces-community-domain-service</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.bleiny.community.domain.core</groupId>
+            <artifactId>spaces-communnity-domain-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+    </dependencies>
     <properties>
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
