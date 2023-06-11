@@ -15,11 +15,7 @@
     <modules>
         <module>bleiny-users</module>
         <module>bleiny-commons</module>
-        <module>infraestructure</module>
         <module>spaces-community</module>
-        <module>spaces-chat-community</module>
-        <module>spaces-chat-personal</module>
-        <module>spaces-telescope</module>
     </modules>
 
     <groupId>com.bleiny</groupId>
