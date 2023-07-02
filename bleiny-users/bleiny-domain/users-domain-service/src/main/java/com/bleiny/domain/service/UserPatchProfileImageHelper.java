@@ -64,12 +64,12 @@ public class UserPatchProfileImageHelper {
         // TODO fileStore.remove(BUCKET_NAME, oldPath);
     }
 
-    private User findUserByUuid(String userId) {
+    public User findUserByUuid(String userId) {
         return userRepository.findByUuid(userId)
                 .orElseThrow(() -> new IllegalStateException("Invalid User"));
     }
 
-    private void findUserByUuidAndUpdateProfileImage(String uuid, String filename) throws Exception {
+    public void findUserByUuidAndUpdateProfileImage(String uuid, String filename) throws Exception {
         try  {
             userRepository.findAndUpdateImageProfile(uuid, filename);
         } catch (Exception e) {
@@ -84,7 +84,7 @@ public class UserPatchProfileImageHelper {
         return metadata;
     }
 
-    private void isImage(MultipartFile file) {
+    public void isImage(MultipartFile file) {
         if (!Arrays.asList(
                 IMAGE_JPEG.getMimeType(),
                 IMAGE_PNG.getMimeType(),
@@ -93,7 +93,7 @@ public class UserPatchProfileImageHelper {
         }
     }
 
-    private void isFileEmpty(MultipartFile file) {
+    public void isFileEmpty(MultipartFile file) {
         if (file.isEmpty()) {
             throw new IllegalStateException("Cannot upload empty file [ " + file.getSize() + "]");
         }

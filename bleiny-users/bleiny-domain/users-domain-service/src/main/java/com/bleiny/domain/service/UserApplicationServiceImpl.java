@@ -27,6 +27,9 @@ public class UserApplicationServiceImpl implements UserApplicationService {
 
     @Override
     public ResponseEntity<?> updateProfileImage(String uuid, MultipartFile file) {
+        if (uuid == null  || file.isEmpty()) {
+            throw new IllegalStateException("UUID Cannot be null");
+        }
         PatchImageProfileCommand command = PatchImageProfileCommand
                 .builder()
                 .userId(uuid)
@@ -37,7 +40,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
                 patchImageProfileCommandHandler.putImage(command);
             } catch (Exception e) {
                 log.error(e.getMessage());
-                return ResponseEntity.internalServerError().build();
+                throw new IllegalArgumentException("The Mime Type must be a Image/GIF");
             }
         return ResponseEntity.noContent().build();
     }

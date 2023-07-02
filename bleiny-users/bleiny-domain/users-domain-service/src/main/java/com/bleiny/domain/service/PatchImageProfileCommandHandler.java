@@ -19,6 +19,10 @@ public class PatchImageProfileCommandHandler {
     }
 
     public void putImage(PatchImageProfileCommand command) throws Exception {
+        try {
             helper.putImage(command);
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
     }
 }

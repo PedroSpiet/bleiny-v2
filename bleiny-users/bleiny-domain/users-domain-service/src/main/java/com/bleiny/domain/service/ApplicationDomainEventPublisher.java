@@ -17,6 +17,9 @@ public class ApplicationDomainEventPublisher implements ApplicationEventPublishe
     }
 
     public void publish(UserCreatedEvent userCreatedEvent) {
+        if (userCreatedEvent == null) {
+            throw new IllegalStateException("Event Cannot be Null");
+        }
         this.applicationEventPublisher.publishEvent(userCreatedEvent);
     }
 }

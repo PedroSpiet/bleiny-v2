@@ -40,9 +40,8 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public void findAndUpdateImageProfile(String uuid, String filename) {
-        log.info(uuid);
         UserEntity userEntity =  userRepository.findByUserUuid(uuid)
-                .orElseThrow(() ->  new IllegalStateException("User Doenst Exist aaa"));
+                .orElseThrow(() ->  new IllegalStateException("User Doenst Exist in the database"));
 
         userEntity.setImage(filename);
         userRepository.save(userEntity);

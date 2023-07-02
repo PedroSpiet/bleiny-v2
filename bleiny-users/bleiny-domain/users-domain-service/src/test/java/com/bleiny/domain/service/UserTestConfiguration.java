@@ -1,6 +1,7 @@
 package com.bleiny.domain.service;
 
 import com.bleiny.domain.core.UsersDomainService;
+import com.bleiny.domain.core.aws.data.s3.FileStore;
 import com.bleiny.domain.service.ports.output.repository.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.mockito.Mock;
@@ -23,5 +24,15 @@ public class UserTestConfiguration {
     @Bean
     ObjectMapper objectMapper() {
         return new ObjectMapper();
+    }
+
+    @Bean
+    PatchImageProfileCommandHandler patchImageProfileCommandHandler() {
+        return Mockito.mock(PatchImageProfileCommandHandler.class);
+    }
+
+    @Bean
+    FileStore fileStore() {
+        return Mockito.mock(FileStore.class);
     }
 }

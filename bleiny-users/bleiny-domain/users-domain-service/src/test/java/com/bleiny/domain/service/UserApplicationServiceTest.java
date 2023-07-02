@@ -19,6 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
+import org.springframework.http.MediaType;
+import org.springframework.mock.web.MockMultipartFile;
 
 import java.util.UUID;
 
@@ -78,6 +80,13 @@ public class UserApplicationServiceTest {
         Throwable error = Assertions.assertThrows(Exception.class, () ->
                 userApplicationService.createUser(null)
                 );
+    }
+
+    @Test
+    void shouldBeUpdatedAnImagePatch() {
+        Throwable error = Assertions.assertThrows(Exception.class, () ->
+                userApplicationService.updateProfileImage(null, null)
+        );
     }
 
 }
