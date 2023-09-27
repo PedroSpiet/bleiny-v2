@@ -2,8 +2,8 @@
 
 
 ### Design Architecture
-<img src="Arquitetura.jpeg">
-<img src="Arquitetura.jpeg">
+<img src="Arquitetura2.jpeg">
+<img src="Arquitetura2.jpeg">
 
 ### How to Setup Terraform and Docker Infras
 ````shell
